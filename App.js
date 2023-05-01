@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from './components/Login';
 import OtpPage from './components/OtpPage';
+import MapPage from './components/MapPage';
 
 export default function App() {
   const Stack = createNativeStackNavigator();
@@ -18,7 +19,7 @@ export default function App() {
     }}> 
       <Stack.Screen name="LOGIN" component={Login} />
       <Stack.Screen name="OTP" component={OtpPage} />
-      {/* <Stack.Screen name="" component={OtpPage} /> */}
+      <Stack.Screen name="MAP" component={MapPage} />
 
     </Stack.Navigator>
   </NavigationContainer>
