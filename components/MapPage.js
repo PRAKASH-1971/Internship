@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View,TextInput,TouchableOpacity,Image ,Pressable} from 'react-native';
-//  import MapView,{PROVIDER_GOOGLE} from 'react-native-maps';
+import { StyleSheet, Text, View,TextInput,TouchableOpacity,Image ,Pressable,requireNativeComponent } from 'react-native';
+ import MapView,{PROVIDER_GOOGLE} from 'react-native-maps';
  import { COLORS, FONT, SIZES,icons } from '../constants';
  import { Searchbar } from 'react-native-paper';
  import React,{ useState } from "react";
@@ -34,7 +34,7 @@ const MapPage = () => {
     <Pressable style={styles.button}>
       <Text style={styles.text}>Select from Map</Text>
     </Pressable>
-      {/* <MapView style={styles.map} provider={PROVIDER_GOOGLE} showsUserLocation={true} /> */}
+      <MapView style={styles.map} provider={PROVIDER_GOOGLE} showsUserLocation={true} />
       <StatusBar style="auto" />
       {/* <Image
         source={require("./assets/images/my-iocn.png")}
@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     map: {
       width: '95%',
       height: '60%',
+      margin:'auto'
     },
     searchContainer: {
       display:'flex',
@@ -108,6 +109,8 @@ const styles = StyleSheet.create({
       fontWeight: 'bold',
       letterSpacing: 0.25,
       color: 'white',
+      width:'60%',
+      textAlign:'center'
     }
 });
 
